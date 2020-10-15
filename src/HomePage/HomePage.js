@@ -13,9 +13,6 @@ function HomePage() {
         <section>
             <h1>Chart</h1>
             <ChartJS/>
-            <p>
-                Chart coming soon!!
-            </p>
 
         </section>
         

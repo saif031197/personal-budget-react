@@ -7,7 +7,6 @@ export class ChartJS extends Component{
         this.state = { Data: {} };
     }
     componentDidMount() {
-        const samples = [];
         axios.get('http://localhost:4000/budget')
             .then(res => {
                 
@@ -57,7 +56,7 @@ export class ChartJS extends Component{
             <div> 
             <Pie
                 data={this.state.Data}
-                options={{ maintainAspectRatio: false }} />
+                options={{ maintainAspectRatio: true }} />
             </div>
         )
     }
