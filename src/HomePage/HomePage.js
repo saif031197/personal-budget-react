@@ -1,27 +1,25 @@
 import React from 'react';
-
-
+import ChartJS from './ChartJS/ChartJS'
 function HomePage() {
   return (
-    <div class="container center">
+    <div className="container center">
         
-    <div class="page-area" role="main" id="content"> 
+    <div className="page-area" role="main" id="content"> 
    
-       <section class="text-box">
+       <section className="text-box">
         <h1>D3JS</h1>
-        <p>
-            <graph></graph>
-        </p>
         </section>
         
-        <section class="text-box">
+        <section>
             <h1>Chart</h1>
+            <ChartJS/>
             <p>
-                <canvas id="myChart" width="165" height="165"></canvas>
+                Chart coming soon!!
             </p>
-            </section>
+
+        </section>
         
-       <section class="text-box">
+       <section className="text-box">
            <h1>Stay on track</h1>
            <p>
                Do you know where you are spending your money? If you really stop to track it down,
@@ -32,14 +30,14 @@ function HomePage() {
 
        
    
-       <section class="text-box">
+       <section className="text-box">
            <h1>Alerts</h1>
            <p>
                What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
            </p>
        </section>
        
-       <section class="text-box">
+       <section className="text-box">
            <h1>Results</h1>
            <p>
                People who stick to a financial plan, budgeting every expense, get out of debt faster!
