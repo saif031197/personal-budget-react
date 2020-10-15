@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import { render } from 'react-dom';
 import PieChart from "./PieComponent";
 export class D3JS extends Component{
     constructor(props) {
@@ -44,7 +43,7 @@ export class D3JS extends Component{
       }
     
     render() {
-        console.log(this.state.Data.budget);
+        console.log(this.state.Data);
         return (
             <div>
               <div>
@@ -54,6 +53,4 @@ export class D3JS extends Component{
           );
     }
 }
-
-render(<D3JS />, document.getElementById('root'));
 export default D3JS;

@@ -52,12 +52,14 @@ export class ChartJS extends Component{
             })
     }
     render() {
+        //console.log(this.state.Data);
         return (
             <div> 
             <Pie
                 data={this.state.Data}
                 options={{ maintainAspectRatio: true }} />
             </div>
+            
         )
     }
 }

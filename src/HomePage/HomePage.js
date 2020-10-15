@@ -12,12 +12,11 @@ function HomePage() {
         <section>
             <h1>Chart</h1>
             <ChartJS/>
-
         </section>
         
         <section className="text-box">
-        <h1>D3JS</h1>
-        <D3JS/>
+            <h1>D3JS</h1>
+            <D3JS/>
         </section>
        <section className="text-box">
            <h1>Stay on track</h1>

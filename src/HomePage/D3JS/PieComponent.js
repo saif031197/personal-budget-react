@@ -9,7 +9,7 @@ const PieComponent = ({data}) => {
 
   const slices = ()=> {
     let arc = d3.arc().innerRadius(0).outerRadius(100);
-    let interpolate = d3.interpolateRgb("#eaaf79","#bc3358");
+    let interpolate = d3.interpolateRgb('#ffcd56','#ff6384','#36a2eb','#fd6b19','#ff0000','#0000ff','#00ff00');
 
     return pie.map((slice,index)=> {
       let color = interpolate(index/( pie.length - 1))
