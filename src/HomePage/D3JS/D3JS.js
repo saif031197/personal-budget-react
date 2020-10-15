@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import { Pie } from 'react-chartjs-2';
-export class ChartJS extends Component{
+import { render } from 'react-dom';
+import PieChart from "./PieComponent";
+export class D3JS extends Component{
     constructor(props) {
         super(props);
         this.state = { Data: {} };
     }
     componentDidMount() {
+        this._isMounted = true;
         axios.get('http://localhost:4000/budget')
             .then(res => {
-                
+              if (this._isMounted){   
                 const res2 = JSON.stringify(res);
                 //console.log(res2);
                 const object = JSON.parse(res2);
@@ -30,36 +32,28 @@ export class ChartJS extends Component{
 
                 this.setState({
                     Data: {
-                        labels: title,
-                        datasets: [
-                            {
-                                label: 'My Budget Chart',
-                                data: value,
-                                backgroundColor: [
-                                    '#ffcd56',
-                                    '#ff6384',
-                                    '#36a2eb',
-                                    '#fd6b19',
-                                    '#ff0000',
-                                    '#0000ff',
-                                    '#00ff00'
-                                    
-                                ]
-                            }
-                        ]
+                        label: title,
+                        data: value
                     }
                 });
+              }
             })
     }
+    componentWillUnmount() {
+        this._isMounted = false;
+      }
+    
     render() {
+        console.log(this.state.Data.budget);
         return (
-            <div> 
-            <Pie
-                data={this.state.Data}
-                options={{ maintainAspectRatio: true }} />
+            <div>
+              <div>
+                <PieChart data={this.state.Data} />
+              </div>
             </div>
-        )
+          );
     }
 }
 
-export default ChartJS;
+render(<D3JS />, document.getElementById('root'));
+export default D3JS;

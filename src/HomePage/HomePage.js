@@ -1,14 +1,13 @@
 import React from 'react';
-import ChartJS from './ChartJS/ChartJS'
+import ChartJS from './ChartJS/ChartJS';
+import D3JS from './D3JS/D3JS'
 function HomePage() {
   return (
     <div className="container center">
         
     <div className="page-area" role="main" id="content"> 
    
-       <section className="text-box">
-        <h1>D3JS</h1>
-        </section>
+       
         
         <section>
             <h1>Chart</h1>
@@ -16,6 +15,10 @@ function HomePage() {
 
         </section>
         
+        <section className="text-box">
+        <h1>D3JS</h1>
+        <D3JS/>
+        </section>
        <section className="text-box">
            <h1>Stay on track</h1>
            <p>
